@@ -1,0 +1,7 @@
+python-dotenv
+argparse
+requests
+huggingface_hub
+transformers
+trl
+peft

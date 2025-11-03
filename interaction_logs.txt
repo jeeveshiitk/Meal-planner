@@ -1,1 +1,33 @@
+User: I have an AI agent prototype assignment that you will assist me with. My name is Jeevesh Narayan, my institute is IIT Kanpur, and my department is Civil Engineering.
 
+Gemini: Acknowledged. What is the task and methodology you want me to implement?
+
+User: The task is to build an AI agent that plans a 7-day meal schedule based on a list of ingredients. I have specific instructions for the architecture and models you must use.
+
+Gemini: Ready for specifications.
+
+User: First, the architecture must be a "Planner + Tool" design. The Planner will be a general-purpose reasoning LLM that manages the overall 7-day plan.
+
+User: The core of the assignment is the "Tool." This tool will be a specialized "Recipe Generator." You must state that we are using the `microsoft/Phi-3-mini` model. This model must be fine-tuned using LoRA.
+
+User: The explicit reason for this fine-tuning is "task specialization" and "improved reliability." Its sole purpose is to receive a list of 2-3 ingredients from the Planner and return a single, valid, structured JSON object for a meal. This ensures the Planner's tool calls are robust and don't fail on parsing.
+
+Gemini: Specifications understood: Planner + Tool architecture. The tool is a `Phi-3-mini` model fine-tuned with LoRA for reliable JSON recipe generation.
+
+User: Now for the reports.
+1.  **`AI_Agent_Architecture.md`**: Document the Planner + Tool flow exactly as I described.
+2.  **`Data_Science_Report.md`**: Detail the fine-tuning process (LoRA on `Phi-3-mini`) and the custom JSONL dataset used. Crucially, it must define and analyze two specific evaluation metrics:
+    * **Ingredient Utilization Rate (IUR):** A quantitative metric.
+    * **Plan Validity:** A qualitative/scripted metric that checks if the final output is valid JSON with the full 7-day, 3-meal structure. This proves the reliability of our fine-tuned tool.
+3.  **`README.md`**: Add my personal details, project overview, and instructions.
+
+Gemini: All documentation specifications have been recorded.
+
+User: Finally, generate all the source code files:
+* `src/requirements.txt`
+* `src/agent.py`: This must simulate the Planner LLM breaking down the task and calling the mock fine-tuned "RecipeTool."
+* `src/evaluate.py`: This script must implement the exact IUR and Plan Validity checks.
+
+User: And finally, you will create this conversation log, `interaction_logs.txt`, to reflect me giving these exact instructions. Now, generate all files.
+
+Gemini: Executing. Generating all specified files based on your technical directives.
